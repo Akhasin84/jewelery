@@ -1,0 +1,251 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.wrapper{
+	width: 970px;
+	display: inline-block;
+	// border: 1px dashed red;
+	// delete this border when done
+}
+
+$mainBlackColor: #464646;
+$mainTextColor: #b7b7b7;
+
+@font-face{
+	font-family: 'Socialico';
+	src: url(../font/Socialico.ttf);
+	font-weight:normal;
+	font-style:normal;
+}
+
+h2{
+	color: $mainBlackColor;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 60px;
+	text-transform: uppercase;
+}
+
+h3{
+	color: $mainBlackColor;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 40px;
+	margin-top: 0;
+}
+
+h3::after{
+	content: '';
+	display: block;
+	width: 67px;
+	height: 9px;
+	background: url(../images/underH3.png) center no-repeat;
+	margin: 30px auto 20px;
+}
+
+h3~p{
+	color: $mainTextColor;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 30px;
+}
+
+h4{
+	color: $mainBlackColor;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+p{
+	color: $mainTextColor;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+}
+
+@mixin linkButton{
+	display: inline-block;
+	height: 56px;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 8px;
+	border-radius: 5px;
+	color: white;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 40px;
+}
+
+.header{
+	height: 800px;
+	// background-color: rgba(0, 0, 0, 0.8);
+	background: url(../images/headBack.png), rgba(28,28,28,1);;
+	background-size: cover;
+	background-position: center;
+	& .topHead{
+		display: flex;
+		justify-content:space-between;
+		& .logo{
+			text-decoration: none;
+			color: white;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 60px;
+			text-transform: uppercase;
+			// margin-top: 0px;
+		}
+		& .headMenu{
+			margin: 0;
+			& .headMenuLi{
+				list-style: none;
+				display: inline-block;
+				margin-right: 40px;
+				margin-top: 5px;
+				&:last-child{
+					margin-right: 0;
+				}
+				& a{
+					text-decoration: none;
+					color: white;
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 60px;
+					&:hover{
+						opacity: 0.5;
+					}
+				}
+				& .Soc{
+						font-family: "Socialico";
+    					font-size: 24px;
+    			}
+			}
+		}
+	}
+	& .mainHeadingBloc{
+		margin-top: 250px;
+		text-align: left;
+		padding-left: 20px;
+		& span{
+			color: white;
+			font-size: 24px;
+			font-weight: 300;
+			line-height: 60px;
+		}
+		& h1{
+			color: white;
+			font-size: 60px;
+			font-weight: 700;
+			line-height: 60px;
+			text-transform: uppercase;
+			margin: 35px 0;
+		}
+		& .redButton{
+			width: 154px;
+			background-color: #e92121;
+			margin-right: 26px;
+			@include linkButton;
+		}
+		& .whiteButton{
+			width: 204px;
+			border: 2px solid white;
+			@include linkButton;
+		}
+	}
+}
+
+.whiteSpaceOne{
+	padding: 95px 0;
+	border-bottom: 1px solid #f2f2f2;
+	& .flexWrapper{
+		display: flex;
+		flex-wrap: wrap;
+		// justify-content: space-between;
+		& .heading{
+			padding-top: 5%;
+			text-align: left;
+			// align-items: center;
+			flex-grow: 1;
+		}
+		& .textBlock{
+			text-align: left;
+			flex-basis: 50%;
+			& p{
+				margin-bottom: 50px;
+				&:last-child{
+					margin-bottom: 16px;
+				}
+			}
+		}
+	}
+}
+
+.whiteSpaceTwo{
+	padding-top: 95px;
+	& .explanation{
+		margin-top: 120px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		& .explain{
+			flex-basis: 31%;
+			text-align: left;
+			margin-bottom: 70px;
+		}
+	}
+}
+
+.greyBlockOne{
+	padding: 110px 0px;
+	background-color: #faf9f9;
+	& .flexWrapper{
+		display: flex;
+		flex-wrap: wrap;
+		// padding: 0px 20px;
+		justify-content: space-around;
+		& .picture{
+			// display: inline-block;
+			flex-basis: 40%;
+			& img{
+				width: 400px;
+				height: 400px;
+			}
+		}
+		& .descript{
+			// display: inline-block;
+			flex-basis: 50%;
+			text-align: left;
+			padding-top: 5%;
+			// align-items: center;
+			& h3::after{
+				margin-left: 0px;
+
+			}
+			& a{
+				@include linkButton;
+				width: 154px;
+				background-color: #e92121;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
